@@ -75,7 +75,7 @@ public class CurrencyTimeSeries
     {
         List<CurrencyRate> ccyData = getAll();
         StringBuilder sb = new StringBuilder();
-        sb.append("date,rate\\n");
+        sb.append(header).append("\\n");
         for(CurrencyRate ccyRate : ccyData)
         {
             sb.append(dateFormat.format(ccyRate.when)).append(",").append(ccyRate.rate).append("\\n");

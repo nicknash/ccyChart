@@ -1,3 +1,5 @@
+package test;
+
 import play.test.*;
 import org.junit.*;
 import static org.junit.Assert.*;
@@ -19,9 +21,9 @@ public class CurrencyTimeSeriesTests
     {
         CurrencyTimeSeries ts = new CurrencyTimeSeries(GetInputStream());
 
-        String csv = ts.getAsCSV("date,rate");
+        String csv = ts.getAsCSV("dateColumn,rateColumn");
 
-        assertEquals("date,rate\\n2012-01-01,1.2345\\n", csv);
+        assertEquals("dateColumn,rateColumn\\n2012-01-01,1.2345\\n", csv);
     }
 }
 
